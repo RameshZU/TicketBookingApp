@@ -1,0 +1,40 @@
+{{page-title "ProfilePage"}}
+<NavbarContainer></NavbarContainer>
+<div class="user_card">
+    <h2 id="profile_title">MY  PROFILE</h2>
+    {{#each this.getUserData as |user|}}
+        <div class="user_data">
+        <div id="user_name_profile"><h3>Name:</h3><h3>{{user.user_name}}</h3></div>
+        <div id="user_number_profile"><h3>Phone Number:</h3><h3>{{user.phone_number}}</h3></div>
+    </div>
+    {{/each}}
+</div>
+<div class="booking_tickets">
+    <h2 id="booking_ticket_title">BOOKING TICKETS</h2>
+      {{#if this.isPassengerAvailable}}
+          <h3>No Booking Tickets</h3>
+          {{else}}
+           {{#each this.model as |obj|}}
+            <div class="tickets">
+              <h3 class="ticket_no">TICKET NO :{{obj.id}}</h3>
+             <div class="passenger_one">   
+            <div class="passenger_column"><h5>PASSENGER NAME</h5><h5>{{obj.passenger_name}}</h5></div>
+            <div class="passenger_column"><h5>PASSENGER AGE</h5><h5>{{obj.age}}</h5></div>
+            <div class="passenger_column"><h5>GENDER</h5><h5>{{obj.gender}}</h5></div>
+             <div class="passenger_column"><h5>JOURNEY DATE</h5><h5>{{obj.journey_date}}</h5></div>
+            </div>
+             <div class="passenger_one">   
+            <div class="passenger_column"><h5>FLIGHT NAME</h5><h5>{{obj.flight_id.flight_name}}</h5></div>
+            <div class="passenger_column"><h5>Flight TIME</h5><h5>{{obj.flight_id.time}}</h5></div>
+            </div>
+             <div class="passenger_one">   
+            <div class="passenger_column"><h5>OFFER PRICE</h5><h5>{{obj.offer_price}}</h5></div>
+            <div class="passenger_column"><h5>PAYMENT AMOUNT</h5><h5>{{obj.payment_amount}}</h5></div>
+            <LinkTo @route='cancel-ticket' @model={{obj.id}} id="cancel_ticket_button"><div>CANCEL</div></LinkTo>
+            </div>
+          </div>
+       {{/each}}
+       <div class="totalAmount">Total Amount = Rs.{{this.getTotalAmount}}</div>
+      {{/if}}    
+</div>
+{{outlet}}

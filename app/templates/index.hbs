@@ -1,0 +1,46 @@
+{{page-title "Index"}}
+<div class="banner_container">
+<NavbarContainer></NavbarContainer>
+<div id="quotes">
+        <h2>If you want to fly like bird 🙂</h2>
+ <h2>&nbsp;Book Your tickets Now!!</h2>
+    </div>
+</div>
+<div class="flight_container">
+    <h4 id="flight_title">FLIGHTS</h4>
+<div class="flight_block">
+    {{#each this.model as |item|}}
+        <LinkTo @route='about-flight' @model={{item.id}} class="flight_box_link"><div class="flight_box">
+        <div style="background-image:url({{item.image}})" class="flight_image">
+        <h3 id="flight_name{{item.id}}">{{item.flight_name}}</h3>
+        </div>
+        <div class="flight_details">
+            <div><h3>From :</h3><h3>{{item.from_city}}</h3></div>
+            <div><h3>To : </h3> <h3>{{item.to_city}}</h3></div>
+        </div>
+        <h3 class="time">Time:{{item.time}}</h3>
+    </div>
+    </LinkTo>
+    {{/each}}
+</div>
+</div>
+<div class="price_details_container">
+    <h4 id="price_title">PRICE DETAILS</h4>
+    <div class="price_block">
+        <h3 class="title">TYPES OF TICKETS</h3>
+        <div class="type"><h3>BUSINESS</h3><h3 class="price">Rs.4999</h3></div>
+         <div class="type"><h3>ECONOMY</h3><h3 class="price">Rs.3599</h3></div>
+          <div class="type"><h3>PREMIMUM</h3><h3 class="price">Rs.1988</h3></div>
+          <p id="note_price_offer">NOTE: There is reduction in ticket price, if passenger is a child (30 % for age below 10) or senior citizen (15% for age above 60)</p>
+    </div>
+</div>
+<div class="contact_container">
+    <h4 id="contact_title">CONTACT</h4>
+    <div class="contact_block">
+        <div class="contact_image">
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.879480796257!2d77.4482548152827!3d8.702993696404716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b043943278e55b3%3A0x531e132c0562476f!2sAdapu%20St%2C%20Ambasamudram%2C%20Tamil%20Nadu%20627401!5e0!3m2!1sen!2sin!4v1613367077245!5m2!1sen!2sin" width="50%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">  </iframe>
+    </div>
+</div>
+<footer>Thanks for visiting my page.</footer>
+{{outlet}}

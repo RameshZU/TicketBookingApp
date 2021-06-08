@@ -1,0 +1,37 @@
+{{page-title "SignupPage"}}
+<div class="signup_container">
+    <div class="signup_box">
+        <div id="left_side_block"><LinkTo @route="index"><i class="fa fa-arrow-left" aria-hidden="true"></i></LinkTo></div>
+        <div id="right_side_block">
+        <h4>SIGNUP</h4>
+        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" id="signup_logo"/>
+        <div id="user_name" class="signup_input">
+            <div class="signup_icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+            <Input @type="text" @placeholder="User Name"  @value={{this.model.user_name}} />
+        </div>
+        {{#if this.nameError}}
+            <p>Please give proper name</p>
+        {{/if}}
+        <div id="user_num" class="signup_input">
+            <div class="signup_icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <Input @type="text" @placeholder="Phone Number" {{on 'change' this.verifyUser}} @value={{this.model.phone_number}}/>
+        </div>
+        {{#if this.numberError}}
+            <p>Please give a correct number</p>
+        {{/if}}
+        {{#if this.verifyUserState}}
+                <p>user is already exists</p>
+        {{/if}}
+         <div id="user_pwd" class="signup_input">
+            <div class="signup_icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+            <Input @type="password" @placeholder="password" @value={{this.model.password}}/>
+        </div>
+        {{#if this.pwdError}}
+            <p>Password must contains 8 digit,1 uppercase,1 lower case,1 digit,1 character.</p>
+        {{/if}}
+        <button type="button" id="signup_button" {{on 'click' this.properError}} >SIGNUP</button>
+        <p>you have already acct?<LinkTo @route="login-page">Login</LinkTo></p>
+    </div>
+    </div>
+</div>
+{{outlet}}

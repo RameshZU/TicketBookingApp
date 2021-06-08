@@ -1,0 +1,15 @@
+<nav>
+    <div class="navbar_div">
+        <LinkTo @route="index" id="link"><img src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/a5o053eczzogmxu8ttwe" class="logo"></LinkTo>
+        <div class="sign_block">
+           {{#if this.checkUserLogin}}
+            <p {{on 'click' this.logOut}} id="LogoutButton" >Logout</p>
+            <LinkTo @route="profile-page" @model={{this.userID}}><div id="icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div></LinkTo>
+            {{else}}
+               <LinkTo @route="login-page" class="link"><p>Login</p></LinkTo>
+            <LinkTo @route="signup-page" class="link"><p>Signup</p></LinkTo>  
+           {{/if}} 
+        </div>
+    </div>
+</nav>
+{{yield}}

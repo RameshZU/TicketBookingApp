@@ -1,0 +1,6 @@
+ <select {{on 'change' this.selectTicketType value="target.value"}}  class="select-tag" disabled={{@disable}}>
+    {{#each @data as |type|}}
+       <option value="{{type}}">{{type}}</option>  
+    {{/each}}
+</select>
+{{yield}}

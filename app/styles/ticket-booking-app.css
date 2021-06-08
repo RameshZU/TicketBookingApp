@@ -1,0 +1,497 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    width:100%;
+    height:100%;
+}
+.banner_container{
+ width:100%;
+ height:90vh;
+ background-image:url("https://wallpaperaccess.com/full/1364767.jpg");
+ background-size: 100% 100%;
+}
+nav{
+    width:100%;
+    padding:1% 0%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 0px 0px 5px 0px #8888;
+    background-color:rgba(250, 250, 250, 0.7);
+    z-index: 5;
+}
+#LogoutButton{
+    padding:2% 0%;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.navbar_div{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sign_block{
+    width:10%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:200px;
+    height: 50px;
+}
+#quotes{
+    position: absolute;
+    top:40%;
+    left:10%;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.flight_container,.price_details_container,.contact_container,.flight_details_block{
+    width:100%;
+    margin:2% auto;
+    padding:2% 0%;
+    position:relative;
+    text-align:center;
+    border-top:1px dotted black;
+    text-align: center;
+}
+.flight_details_block{
+    width:60%;
+
+}
+.flight_block{
+    width:80%;
+    padding:2% 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.book{
+    position: absolute;
+    bottom: 0%;
+    right:0%;
+    padding:1%;
+    background-color: red;
+    color:white;
+}
+#flight_title,#price_title,#contact_title,#flight_page_title{
+    padding:.3% 3%;
+    position: absolute;
+    left:50%;
+    top:-0%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+    color:white;
+    border-radius: 20px 20px 20px 20px;
+}
+#flight_page_title{
+    background-color: aqua;
+    color: yellow;
+}
+.flight_image{
+    position: relative;
+    width:100%;
+    height:200px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+#flight_name1,#flight_name2,#flight_name3,#flight_name4,#flight_name5,#flight_name6{
+    position:absolute;
+    bottom:-15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orangered;
+    padding:1% 3%;
+    border-radius: 20px 20px 20px 20px;
+    color:white;
+}
+.flight_box_link{
+    width:24%;
+    margin:2% 0% ;
+    box-shadow:0px 0px 3px 0px #8888;
+    text-decoration: none;
+    color: black;
+}
+.flight_box{
+    width:100%;
+}
+.flight_details,.from_to_details,#day_schedule,#time_details,#seat_details{
+    width:80%;
+    margin: auto;
+    padding:3% 0%;
+    text-align: left;
+}
+#time_details,#seat_details{
+    padding: 1% 0%;
+}
+.flight_details div,.from_to_details div,#day_schedule div,#time_details div,#seat_details div{
+    width:100%;
+    padding:2% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#time_details div,#seat_details div{
+    padding:1% 0% ;
+}
+.tab{
+    display: inline-block;
+   margin-left:100px;
+}
+.time{
+    padding:2% 0%;
+    background-color: greenyellow;
+}
+.price_block,.contact_block{
+    width:60%;
+    margin: auto;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.contact_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price_block div{
+    width:90%;
+    padding:3% 0%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.price_block div h3{
+    display: inline;
+}
+.price{
+    text-align: right;
+}
+.title{
+    padding:2% 0%;
+    background-color: orangered;
+}
+#note_price_offer{
+    padding:2% 0;
+}
+.contact_image{
+    width:50%;
+    height: 450px;
+    background-image: url("https://image.freepik.com/free-vector/online-flight-booking-banner-illustration_184220-234.jpg");
+    background-size: 100% 100%;
+}
+footer{
+    width:100%;
+    padding:1% 0%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/*signup-page*/
+.signup_container,.login-container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup_box,.login_box{
+    width:60%;
+    box-shadow: 0px 0px 5px 0px #8888;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left_side_block{
+    width:50%;
+    height:700px;
+    background-size: 100% 100%;
+    text-align: left;
+}
+#left_side_block{
+    background-image:url("https://i1.wp.com/ablebest.com.sg/wp-content/uploads/2018/04/maidairtickets.png");
+}
+#left_side_block a{
+   margin: 3% 0%;;
+    font-size: 30px;
+    color: white;
+}
+#right_side_block,#login_right_side{
+    width:50%;
+}
+.signup_input,.login_input{
+    width:60%;
+    height:30px;
+    font-size:20px;
+    margin:5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius:10px 10px 10px 10px;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.signup_icon{
+    width:10%;
+    border-right: 1px solid black;
+}
+.signup_icon i{
+    color: gray;
+}
+#signuplink{
+    margin-bottom: 7%;
+}
+.signup_input input,.login_input input{
+    width:80%;
+    padding-left:3px ;
+    outline: none;
+    border: none;
+}
+#signup_button{
+    width:60%;
+    background-color: lightcoral;
+    color: white;
+    border: none;
+    outline: none;
+    margin:7% 0% 0%;
+    padding: 2% 0%;
+    border-radius:10px 10px 10px 10px;
+}
+#signup_logo{
+    width:200px;
+    height:200px;
+    margin:3% 0%;
+}
+.back_arrow{
+    width:80%;
+    margin: auto;
+    padding:2% 0%;
+    font-size:28px ;
+    text-align: left;
+}
+p{
+    font-size:12px;
+}
+
+/*about_flight*/
+
+#flight_page_image{
+    width:100%;
+    height:65vh;
+    background-size: 100% 100%;
+}
+#about_flight{
+    margin: 2% auto;
+    padding: 2% 0%;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.about_flight_container{
+    position: relative;
+}
+/*booking*/
+.bookingContainer{
+    width:80%;
+    margin: auto;
+    padding:3% 0%;
+    text-align: center;
+}
+.input_form{
+    width:60%;
+    margin:3% auto;
+}
+#book_title{
+    padding:2% 0%;
+    background-color: salmon;
+    color: white;
+}
+.passenger_input_block,.flight-input_block{
+    width:90%;
+    padding:2% 0%;
+    margin: auto;
+}
+.passenger_input_box,.price_details_box,.flight_name{
+    width:100%;
+    margin:2% auto;
+    padding:2% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flight_name,.price_details_box{
+    flex-wrap: wrap;
+}
+.passenger_input_box input,.flight_name input,#price_input_text{
+    width:40%;
+    font-size: 20px;
+}
+.title_box,.flight_input_box{
+    width: 100%;
+    margin:2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title_box h3{
+    width:50%;
+    margin: auto;
+    text-align: left;
+}
+.flight_name input{
+    width:35%;
+}
+.select-tag,#date{
+    width:40%;
+    margin:2% 0%;
+    font-size:20px;
+}
+#icon i{
+    font-size:40px;
+}
+#addPassenger,#booknow{
+    width:20%;
+    padding: 2%;
+    margin:3% auto;
+    border: none;
+    outline: none;
+    border-radius:10px 10px 10px 10px;
+    background-color: orange;
+    color: white;
+}
+#booknow{
+   background-color: green; 
+}
+.user_card,.booking_tickets{
+    width:60%;
+    margin:3% auto;
+    padding:2%  0%;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.booking_tickets{
+    width:80%;
+    position: relative;
+}
+#profile_title,#booking_ticket_title{
+    padding:2% 0%;
+    width:80%;
+    border-bottom: 1px double black ;
+}
+.user_data{
+    width:80%;
+    margin: auto;
+    padding:2% 0%;
+}
+#user_name_profile,#user_number_profile,.delete_passenger_details{
+    width:90%;
+    margin: auto;
+    padding:3% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.totalAmount{
+    width:20%;
+    margin-top:2% ;
+    padding:1%;
+    background-color: rgb(156, 236, 119);
+    color: rgb(230, 39, 14);
+    position: absolute;
+    right:0%;
+    bottom:0%;
+}
+#cancel_ticket_button{
+    width:30%;
+    padding:2% 0%;
+    text-decoration: none;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+#cancel_ticket_button div{
+    margin: auto;
+}
+/*cancel ticket*/
+.cancel_ticket_card{
+    width:40%;
+    height:350px;
+    position: relative;
+    border: 1px dotted black;
+    box-shadow: 0px 0px 5px 0px #8888;
+    margin:5% auto;
+}
+#confirm{
+ padding:2% 0%;
+ background-color: cyan;
+ color: rgb(255, 0, 43);
+ text-align: center;
+}
+.cancel_passenger{
+ width:80%;
+ padding:2% 0%;
+}
+.button_block{
+    width:35%;
+    margin:5% 0%;
+    position:absolute;
+    right:2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button_block input{
+    width:40%;
+    padding:2% 0%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+#cancelbutton{
+    background-color: red;
+    color: white;
+}
+#confirmbutton{
+background-color: green;
+color: white;
+}
+input[type="button"]:active{
+    transform: scale(.8);
+}
+.tickets{
+    width:60%;
+    margin:2% auto;
+    //margin: auto;
+    box-shadow: 0px 0px 5px 0px #8888;
+}
+.passenger_one{
+ width:100%;
+ margin: 3% auto;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.passenger_one div,.cancel_ticket_button{
+    width:30%;
+    padding:2%;
+    margin:2%;
+    text-align: center;
+    box-shadow: 0px 0px 3px 0px #8888;
+}
+.ticket_no{
+    background-color: skyblue;
+    color: white;
+    padding: 2% 0%;
+    text-align: center;
+}

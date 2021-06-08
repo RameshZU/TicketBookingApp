@@ -1,0 +1,28 @@
+{{page-title "LoginPage"}}
+<div class="login-container">
+ <div class="login_box">
+     <div id="login_left_side"></div>
+     <div id="login_right_side">
+         <h2>LOGIN</h2>
+         <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" id="signup_logo"/>
+          <div id="user_num" class="login_input">
+            <div class="signup_icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <Input @type="text" @placeholder="Phone Number" @value={{this.userPhoneNumber}} {{on 'change' this.verifyUser}}/>
+        </div>
+        {{#if this.numberCheck}}
+            <p>Please give a correct number</p>
+        {{/if}}
+        {{#if this.verifyUserState}}
+                <p>user is not exists</p>
+        {{/if}}
+         <div id="user_pwd" class="login_input">
+            <div class="signup_icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+            <Input @type={{this.inputType}} @placeholder="password" @value={{this.pwd}} />
+            <div {{on 'click' this.changeInputType}}><i class={{if this.isInputTypePassword "fa fa-eye-slash"  "fa fa-eye"}} aria-hidden="true" ></i></div>
+        </div>
+        <button type="button" id="signup_button" {{on 'click' this.validateInput }} >LOGIN</button> 
+        <h3 id="signuplink">You don't have an acct? <LinkTo @route="signup-page" >Signup</LinkTo></h3>
+     </div>
+ </div>
+</div>
+{{outlet}}

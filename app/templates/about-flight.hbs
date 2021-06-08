@@ -1,0 +1,28 @@
+{{page-title "AboutFlight"}}
+<div class="about_flight_container">
+    <NavbarContainer></NavbarContainer>
+    <div class="flight_details_block">
+       <h1 id="flight_page_title">{{this.model.flight_name}}</h1>
+       <div id="flight_page_image" style="background-image: url({{this.model.image}});"></div>
+       <div id="about_flight">
+           <h2>ABOUT DETAILS</h2>
+           <div class="from_to_details">
+            <div><h3>From :</h3><h3>{{this.model.from_city}}</h3></div>
+            <div><h3>To : </h3> <h3>{{this.model.to_city}}</h3></div>
+        </div>
+        <div id="time_details">
+           <div><h3>Time :</h3><h3>{{this.model.time}}</h3></div>
+        </div>
+         <div id="day_schedule">
+           <div><h3>day :</h3><h3>{{this.model.day_schedule}}</h3></div>
+        </div>
+        <div id="seat_details">
+           <div><h3>seat availability :</h3><h3>{{this.model.seat_availability}}</h3></div>
+        </div>
+       </div>
+    </div>
+    {{#if this.avaiableForBooking}}
+        <LinkTo @route='ticket-booking-page' @model={{this.model.id}} class="book"><div>Book Now</div></LinkTo>
+    {{/if}}
+</div>
+{{outlet}}

@@ -1,0 +1,16 @@
+{{page-title "CancelTicket"}}
+ <NavbarContainer></NavbarContainer>
+<div class="cancel_ticket_card">
+<h3 id="confirm">CONFIRMATION</h3>
+<div class="cancel_passenger">
+<div class="delete_passenger_details"><h3>Passenger Name :</h3><h3>{{this.model.passenger_name}} </h3></div>
+<div class="delete_passenger_details"><h3>Passenger Age :</h3><h3>{{this.model.age}}</h3></div>
+<div class="delete_passenger_details"><h3>Journey Date :</h3><h3>{{this.model.journey_date}}</h3></div>
+</div>
+<div class="button_block">
+    <input type="button" value="CANCEL" id="cancelbutton" {{on 'click' this.exitTicketCancellation}}>
+    <input type="button" value="CONFIRM" id="confirmbutton" {{on 'click' this.cancelTheTicket}}>
+</div>
+</div>
+
+{{outlet}}

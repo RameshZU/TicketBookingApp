@@ -1,0 +1,14 @@
+    <div class="passenger_input_box">
+        <Input @type='text' @value={{@data.passenger_name}} @placeholder="Passenger Name"/>
+        <Input @type='number' @value={{@data.age}} placeholder="Passenger Age"/>
+ </div>
+ <div class="price_details_box">
+         <SelectTagInput @data={{@record.ticketType}}  @modelObj={{@data}} @disable={{false}}></SelectTagInput>
+         <Input @type='text'   @disable={{true}} @Value={{this.ticketPrice}} id="price_input_text" @disabled="true" />
+         <Input @type="date" @value={{@data.journey_date}}  @flightData={{@flightData}}  @modelObj={{@data}} {{on 'change' this.checkSeatAvailabilty}} id="date" @min={{this.getCurrentDate}} @max={{this.setMaxDate}} />
+         <SelectTagInput @data={{@record.gender}} @modelObj={{@data}} @disable={{false}}></SelectTagInput>
+ </div> 
+
+
+
+{{yield}}
